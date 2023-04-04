@@ -13,7 +13,10 @@
     <main>
         <p>Inserisci qui il testo</p>
         <form action="validator.php" method="get">
-            <textarea name="textToValidate" id="validator" cols="30" rows="10"></textarea>
+            <label for="censor">Parola da censurare</label>
+            <input type="text" name="censor" id="censor">
+            <label for="validator">Testo da controllare</label>
+            <textarea name="textToValidate" id="validator" cols="80" rows="10"></textarea>
             <button>Invia</button>
         </form>
     </main>
