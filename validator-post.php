@@ -1,10 +1,10 @@
 <?php
 
 //Get badwords
-$censor=$_GET["censor"];
+$censor=$_POST["censor"];
 
 //Get text to check
-$text=$_GET["textToValidate"];
+$text=$_POST["textToValidate"];
 
 //Substitute badwords
 $textValid=str_replace($censor, "***", $text);
@@ -30,7 +30,9 @@ var_dump($textPart);
     <title>Result validator</title>
 </head>
 <body>
-    <header><p>quello sopra è la visualizzazione in forma strutturata di una espressione</p>
+    <header>
+        <p>quello sopra è la visualizzazione in forma strutturata di una espressione</p>
+        <h2>Qui è tutto uguale ma il metodo è POST</h2>
     </header>
     <main>
         <h2>Il testo da te inserito è:</h2>
