@@ -7,7 +7,9 @@ $censor=$_GET["censor"];
 $text=$_GET["textToValidate"];
 
 //Substitute badwords
-$textValid=str_replace($censor, "***", $text);
+//$textValid=str_replace($censor, "***", $text);
+//Substitute badwords but case insensitive
+$textValid=str_ireplace($censor, "***", $text);
 
 //Remove space from text
 $textNoSpace=str_replace(" ", "", $text);
